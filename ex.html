@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+    <head>
+        <title>Exchange website</title>
+
+      <style>
+        body { 
+           background-color: rgb(255, 255, 255);
+        }
+
+        .amount-input-left {
+            background-color: rgb(255, 255, 255);
+            position : absolute;
+            top : 500px;
+            left : 400px;
+        }
+        .amount-input-right {
+            
+            background-color: rgb(255, 255, 255);
+            position : absolute;
+            top : 500px;
+            left : 900px;
+        }
+
+
+        .scroll-picker {
+        height: 50px;       /* Shows only one item at a time */
+        width: 80px;
+        overflow-y: scroll; /* Enables vertical scrolling */
+        border: 2px solid #007BFF;
+        border-radius: 8px;
+        
+        /* This forces the scroll to "snap" into place */
+        scroll-snap-type: y mandatory; 
+        
+        /* Hides the ugly scrollbar */
+        scrollbar-width: none; 
+        }
+
+        .scroll-picker::-webkit-scrollbar {
+        display: none; /* Hides scrollbar for Chrome/Safari */
+        }
+
+        .picker-item {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: bold;
+        
+        /* Tells the browser where to snap */
+        scroll-snap-align: center; 
+        }
+        
+        </style>
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+
+
+    <body>
+        <h1>Exchange Website</h1>
+
+       <input type="text" class = "amount-input-left" placeholder="Enter the amount here">
+      <input type="text" class = "amount-input-right" placeholder="Enter the amount here">
+       <input type = "checkbox" name = "currency" value = "USD"> USD
+       <input type = "email" name = "currency" value = "EUR"> EUR
+
+        <div class="scroll-picker">
+        <div class="picker-wrapper">
+            <div class="picker-item">1</div>
+            <div class="picker-item">2</div>
+            <div class="picker-item">3</div>
+            <div class="picker-item">4</div>
+            <div class="picker-item">5</div>
+            <div class="picker-item">6</div>
+            <div class="picker-item">7</div>
+            <!-- Add up to 31 -->
+        </div>
+        </div>
+
+
+    </body>
+</html>
